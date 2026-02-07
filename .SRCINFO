@@ -1,7 +1,7 @@
 pkgbase = python-rapidocr
 	pkgdesc = Cross-runtime OCR library
 	pkgver = 3.6.0
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/RapidAI/RapidOCR
 	arch = any
 	license = Apache-2.0
@@ -28,7 +28,7 @@ pkgbase = python-rapidocr
 	optdepends = python-pytorch: Supported runtime
 	source = https://github.com/RapidAI/RapidOCR/archive/v3.6.0.tar.gz
 	source = https://github.com/RapidAI/RapidOCR/releases/download/v1.1.0/required_for_whl_v3.0.0.zip
-	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v${pkgver}/resources/fonts/FZYTK.TTF
+	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.6.0/resources/fonts/FZYTK.TTF
 	source = setup.py.patch
 	sha256sums = 8b061f87053e37e1943c0f372fffa2a6a52f064018ee69cceaeb32e8143ff782
 	sha256sums = e050aa8cf29cdbea04550204336859069dcbf7bb86761112d2008ae93db13296
