@@ -1,7 +1,7 @@
 # Maintainer: aliu <AA RON LIU <GMAIL.COM> >
 pkgname=python-rapidocr
-pkgver=3.6.0
-pkgrel=3
+pkgver=3.7.0
+pkgrel=1
 pkgdesc='Cross-runtime OCR library'
 arch=('any')
 license=('Apache-2.0')
@@ -30,7 +30,7 @@ source=("https://github.com/RapidAI/RapidOCR/archive/v${pkgver}.tar.gz"
 	'https://github.com/RapidAI/RapidOCR/releases/download/v1.1.0/required_for_whl_v3.0.0.zip'
 	"https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v${pkgver}/resources/fonts/FZYTK.TTF"  # needed for check
 	'setup.py.patch')
-sha256sums=('8b061f87053e37e1943c0f372fffa2a6a52f064018ee69cceaeb32e8143ff782'
+sha256sums=('612d06dd36e638ade4da81d851dfaed8d0fd17a986218d1ecd79cf49e626e64b'
             'e050aa8cf29cdbea04550204336859069dcbf7bb86761112d2008ae93db13296'
             '4065a23df6823c8e2b69a0e76d02f02a6470b8774a5e91086609701ad95cc33f'
             'ebfa9ac2f957378702f1ec6d07e8ca7b2a3f1c66e8194fc63bc8a35dfcebb5ca')
