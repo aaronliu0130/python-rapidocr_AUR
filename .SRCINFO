@@ -1,12 +1,12 @@
 pkgbase = python-rapidocr
 	pkgdesc = Cross-runtime OCR library
-	pkgver = 3.8.4
-	pkgrel = 2
+	pkgver = 3.9.0
+	pkgrel = 1
 	url = https://github.com/RapidAI/RapidOCR
 	arch = any
 	license = Apache-2.0
 	makedepends = python-build
-	makedepends = python-installer
+	makedepends = python-installer>=1.0.1
 	makedepends = python-setuptools
 	depends = python>=3.8
 	depends = python-pyclipper>=1.2.0
@@ -26,15 +26,15 @@ pkgbase = python-rapidocr
 	optdepends = python-openvino: Supported runtime
 	optdepends = python-paddlepaddle: Supported runtime
 	optdepends = python-pytorch: Supported runtime
-	source = https://github.com/RapidAI/RapidOCR/archive/v3.8.4.tar.gz
-	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.8.0/onnx/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.onnx
-	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.8.0/onnx/PP-OCRv4/cls/ch_ppocr_mobile_v2.0_cls_mobile.onnx
-	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.8.0/onnx/PP-OCRv4/rec/ch_PP-OCRv4_rec_mobile.onnx
+	source = https://github.com/RapidAI/RapidOCR/archive/v3.9.0.tar.gz
+	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.0/onnx/PP-OCRv6/det/PP-OCRv6_det_small.onnx
+	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.0/onnx/PP-OCRv4/cls/ch_ppocr_mobile_v2.0_cls_mobile.onnx
+	source = https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.0/onnx/PP-OCRv6/rec/PP-OCRv6_rec_small.onnx
 	source = pyproject.toml.patch
-	b2sums = 56e313f692823a1bd8b799bb3cb9d48980cd215dc0e23d1dba4e960e2c3c67282c994981a0383cae2b8c5344d1db74aa2a1a457e2122d42717c32c45e015af48
-	b2sums = 67566aa137427a05919373bfee74ee69735d9b5d888f7f8b8fd9bf10e9e75e3b129e91a1ea74d1b8b2eb8b0be81576101d081c16530296385fd3c1bed107282a
+	b2sums = 924ce6b578cf421c5b0ad2b4243e7f81cc86cbfa5a66e036f912367a997ec39ef5ca8b110cbe7b9669d2dfdad598a9f4f8f15c6ca2dfd3569f15b065d2c87d25
+	b2sums = 22409f1a00b806c03ceefa0a75bb6c43950e7627f33348944ac769a71b9ee8caa6d3142021a56e0a668a13f9ac14fb3486257293397a1c4c32494ca422b25f82
 	b2sums = f0c251313ce88e8ce74ebc995e3d7488541727ac9d242db4089bef7c131b0a8d59e7a322b592f5f07e5702e8d58e232510103f18438b5cb8cbfbb285cd3290a6
-	b2sums = 9efd96d3174c3ee940ce3e5f99932ec7571ceb5a180ecdde512db09244958daf70d3909de437a6670cb873abd17254ae4a362a9ceccbb8b8d50874f5bd3b4080
-	b2sums = 81484510a756aa733985e8ba0f9198011487786b45fa67fb1a65799f3bd0fd6d2c2b66453c6af6c9b8496fe07432d60941766b2901c729b82d9f24e6d3083773
+	b2sums = 267c40f15280dcfac6930ef69d3106c950c425c1af76c776eedda4fbba7133676b9490f503a212fe73b97f2fd87808430f49bfc6ffda1eadc1f940d0b2a6a84a
+	b2sums = 06fdefd3dd0357eec4b82c84ee12369231c2182e005f4b2053077377014fb538981a5b0fb48fa1b53352b736866a86a2fb3367fcc65ba9f283bd796bd5f252d3
 
 pkgname = python-rapidocr
