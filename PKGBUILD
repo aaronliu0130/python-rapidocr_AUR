@@ -1,6 +1,6 @@
 # Maintainer: aliu <AA RON LIU <GMAIL.COM> >
 pkgname=python-rapidocr
-pkgver=3.9.0
+pkgver=3.9.1
 pkgrel=1
 pkgdesc='Cross-runtime OCR library'
 arch=('any')
@@ -34,7 +34,7 @@ source=("https://github.com/RapidAI/RapidOCR/archive/v${pkgver}.tar.gz"
 	'https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.0/onnx/PP-OCRv6/rec/PP-OCRv6_rec_small.onnx'
 	# patch-in version number
 	'pyproject.toml.patch')
-b2sums=('924ce6b578cf421c5b0ad2b4243e7f81cc86cbfa5a66e036f912367a997ec39ef5ca8b110cbe7b9669d2dfdad598a9f4f8f15c6ca2dfd3569f15b065d2c87d25'
+b2sums=('55a3f0e43f0a9d5efdb1fe9acea4ba303b01189ecde92934ac79b067d4d7de827a6d57bb3501a952584956e8de4106fb1ef6df9fc4bfa88192865a32fd54e20d'
         '22409f1a00b806c03ceefa0a75bb6c43950e7627f33348944ac769a71b9ee8caa6d3142021a56e0a668a13f9ac14fb3486257293397a1c4c32494ca422b25f82'
         'f0c251313ce88e8ce74ebc995e3d7488541727ac9d242db4089bef7c131b0a8d59e7a322b592f5f07e5702e8d58e232510103f18438b5cb8cbfbb285cd3290a6'
         '267c40f15280dcfac6930ef69d3106c950c425c1af76c776eedda4fbba7133676b9490f503a212fe73b97f2fd87808430f49bfc6ffda1eadc1f940d0b2a6a84a'
@@ -65,7 +65,7 @@ build() {
 
 check() {
 	cd "${srcdir}/RapidOCR-${pkgver}/python/build/lib"
-	if [[ -f /etc/rapidocr/config.yaml ]]; then
+	if [[ -f /etc/rapidocr/config.yaml ]]; then  # Test with old config
 		mv {rapidocr,"${srcdir}"}/config.yaml
 		cp /etc/rapidocr/config.yaml rapidocr/config.yaml
 		cp /usr/lib/python*/site-packages/rapidocr/models/*.onnx --update=none rapidocr/models/
@@ -76,7 +76,7 @@ check() {
 package() {
 	cd "${srcdir}/RapidOCR-${pkgver}/python"
 	python -m installer --destdir="${pkgdir}" dist/*.whl
-	# move config file to /etc
+	# Move config file to /etc
 	mkdir -p "${pkgdir}/etc/rapidocr/"
 	if [[ -f "${srcdir}/config.yaml" ]]; then  # created backup during check()
 		mv {"${srcdir}","${pkgdir}"/etc/rapidocr}/config.yaml
@@ -84,6 +84,5 @@ package() {
 	else
 		mv "${pkgdir}"/usr/lib/python*/site-packages/rapidocr/config.yaml "${pkgdir}"/etc/rapidocr/config.yaml
 	fi
-	set -x
 	ln -s /etc/rapidocr/config.yaml "$(ls -d "${pkgdir}"/usr/lib/python*/site-packages/rapidocr)/config.yaml"
 }
